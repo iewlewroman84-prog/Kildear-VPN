@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kildear VPN — Безопасный и быстрый VPN</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
     <style>
         /* ====== RESET & BASE ====== */
         * {
@@ -251,6 +251,24 @@
             border-radius: 40px;
             white-space: nowrap;
         }
+        .pricing-card.free {
+            border: 2px solid #22c55e;
+            background: #f0fdf4;
+        }
+        .pricing-card.free::before {
+            content: '🎁 Бесплатно';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #22c55e;
+            color: #fff;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 4px 18px;
+            border-radius: 40px;
+            white-space: nowrap;
+        }
         .pricing-card .days {
             font-size: 14px;
             font-weight: 600;
@@ -268,6 +286,9 @@
             font-size: 18px;
             font-weight: 400;
             color: #64748b;
+        }
+        .pricing-card .price-free {
+            color: #22c55e;
         }
         .pricing-card .devices {
             font-size: 14px;
@@ -306,6 +327,9 @@
             font-weight: 700;
             font-size: 16px;
         }
+        .pricing-card.free ul li::before {
+            color: #22c55e;
+        }
         .btn-card {
             display: inline-block;
             background: #0b1a33;
@@ -332,6 +356,12 @@
         .btn-card-outline:hover {
             border-color: #6366f1;
             background: rgba(99, 102, 241, 0.04);
+        }
+        .btn-card-free {
+            background: #22c55e;
+        }
+        .btn-card-free:hover {
+            background: #16a34a;
         }
 
         /* ====== ПРЕИМУЩЕСТВА ====== */
@@ -480,7 +510,7 @@
         <nav class="nav">
             <a href="#pricing">Тарифы</a>
             <a href="#features">Преимущества</a>
-            <a href="https://t.me/ваш_бот_username" class="btn-small">Telegram-бот</a>
+            <a href="https://t.me/kildear_vpn_bot" class="btn-small">Telegram-бот</a>
         </nav>
     </div>
 </header>
@@ -507,6 +537,19 @@
         </div>
         <div class="pricing-grid">
 
+            <!-- 2 дня / 1 устройство (БЕСПЛАТНО) -->
+            <div class="pricing-card free animate-on-scroll">
+                <div class="days">🎁 2 дня</div>
+                <div class="price price-free">0 <span>₽</span></div>
+                <div class="devices"><i>📱 1 устройство</i></div>
+                <ul>
+                    <li>Доступ к контенту</li>
+                    <li>Скорость до 100 Мбит/с</li>
+                    <li>Тестовый период</li>
+                </ul>
+                <a href="https://t.me/kildear_vpn_bot?start=2d" class="btn-card btn-card-free">Попробовать бесплатно →</a>
+            </div>
+
             <!-- 7 дней / 1 устройство -->
             <div class="pricing-card animate-on-scroll">
                 <div class="days">7 дней</div>
@@ -516,7 +559,7 @@
                     <li>Доступ к контенту</li>
                     <li>Скорость до 100 Мбит/с</li>
                 </ul>
-                <a href="https://t.me/ваш_бот_username?start=7d" class="btn-card">Купить</a>
+                <a href="https://t.me/kildear_vpn_bot?start=7d" class="btn-card">Купить</a>
             </div>
 
             <!-- 14 дней / 2 устройства (популярный) -->
@@ -529,7 +572,7 @@
                     <li>Скорость до 150 Мбит/с</li>
                     <li>Поддержка 24/7</li>
                 </ul>
-                <a href="https://t.me/ваш_бот_username?start=14d" class="btn-card">Купить</a>
+                <a href="https://t.me/kildear_vpn_bot?start=14d" class="btn-card">Купить</a>
             </div>
 
             <!-- Месяц / 2 устройства -->
@@ -542,7 +585,7 @@
                     <li>Скорость до 150 Мбит/с</li>
                     <li>Поддержка 24/7</li>
                 </ul>
-                <a href="https://t.me/ваш_бот_username?start=1m" class="btn-card btn-card-outline">Купить</a>
+                <a href="https://t.me/kildear_vpn_bot?start=1m" class="btn-card btn-card-outline">Купить</a>
             </div>
 
             <!-- 3 месяца / 3 устройства -->
@@ -556,7 +599,7 @@
                     <li>Поддержка 24/7</li>
                     <li>Экономия 30%</li>
                 </ul>
-                <a href="https://t.me/ваш_бот_username?start=3m" class="btn-card btn-card-outline">Купить</a>
+                <a href="https://t.me/kildear_vpn_bot?start=3m" class="btn-card btn-card-outline">Купить</a>
             </div>
 
             <!-- Год / 5 устройств -->
@@ -570,7 +613,7 @@
                     <li>Поддержка 24/7</li>
                     <li>Экономия 45%</li>
                 </ul>
-                <a href="https://t.me/ваш_бот_username?start=1y" class="btn-card btn-card-outline">Купить</a>
+                <a href="https://t.me/kildear_vpn_bot?start=1y" class="btn-card btn-card-outline">Купить</a>
             </div>
 
         </div>
@@ -614,7 +657,7 @@
     <div class="container">
         <h2>Готовы к защите?</h2>
         <p>Начните пользоваться Kildear VPN уже сегодня. Просто нажмите на кнопку.</p>
-        <a href="https://t.me/ваш_бот_username" class="btn-primary">Перейти в бота →</a>
+        <a href="https://t.me/kildear_vpn_bot" class="btn-primary">Перейти в бота →</a>
     </div>
 </section>
 
